@@ -7,7 +7,11 @@
 
  Run: `php artisan vendor:publish` - Then select 1.
  
- 4) Chang locale to `fa` in `config/app.php`
+ 4) Change locale to `fa` in `config/app.php`
+ 
+ 5) Add this to your providers in `config/app.php`
+ 
+ `App\Providers\MetronicServiceProvider::class,`
  
  #### Laravel 8
  Put this in `User.php` in Models directory
