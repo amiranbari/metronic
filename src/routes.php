@@ -1,6 +1,6 @@
 <?php
 
-Route::prefix('panel')->namespace('Panel')->middleware('web')->as('panel.')->group(function () {
+Route::prefix('panel')->middleware('web')->as('panel.')->group(function () {
 
     //login & logout
     Route::get('/login', 'App\Http\Controllers\Panel\AuthController@loginPage');
