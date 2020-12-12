@@ -1,0 +1,27 @@
+{
+    "name": "amiranbari/metronic",
+    "description": "it's a basic Management panel",
+    "authors": [
+        {
+            "name": "Amir anbari",
+            "email": "amiranbari33@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "spatie/laravel-permission": "^3.16"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "AmirAnbari\\Metronic\\": "src/"
+        }
+    } ,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AmirAnbari\\Metronic\\MetronicServiceProvider"
+            ]
+        }
+    }
+}

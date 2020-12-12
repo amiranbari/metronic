@@ -1,0 +1,12 @@
+#datatable_admin_list{
+    text-align: center;
+}
+
+.svg-icon, .label-cursor{
+    cursor: pointer;
+}
+
+
+.alert-size-small{
+    padding: 0.1rem 1.5rem !important;
+}
