@@ -62,6 +62,7 @@ Change `composer.json` autoload section like below"
 7) Put these in `Kernel.php` in Http directory
 
 `use App\Http\Middleware\Panel\CheckPermission;`
+
 `'permission' => CheckPermission::class,` in routeMiddleware 
 
 8) Change these in `Authenticate.php` in redirectTo functions
