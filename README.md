@@ -48,6 +48,14 @@ Change `composer.json` autoload section like below"
             'provider' => 'users',
         ]
 ```
+5) Put these in `Kernel.php` in Http directory
+
+`use App\Http\Middleware\Panel\CheckPermission;`
+
+6) Put these in `Kernel.php` in $routeMiddleware
+
+`permission' => CheckPermission::class`
+
   
 - `php artisan serve`
 
