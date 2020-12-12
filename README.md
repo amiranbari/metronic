@@ -54,7 +54,7 @@ Change `composer.json` autoload section like below"
 
 6) Put these in `Kernel.php` in $routeMiddleware
 
-`'permission'' => CheckPermission::class`
+`'permission' => CheckPermission::class`
 
   
 - `php artisan serve`
