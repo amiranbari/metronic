@@ -40,6 +40,14 @@ Change `composer.json` autoload section like below"
 ```
 
 - `php artisan migrate --seed`
+
+ Add these into guards in `auth.php`:
+```
+	'admin' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ]
+```
   
 - `php artisan serve`
 
