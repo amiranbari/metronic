@@ -31,10 +31,22 @@ Change `composer.json` autoload section like below"
        }   
  ```
  
+ Run: `composer dump-autoload`
+ 
  Add these seeders call in `DatabaseSeeder.php`:
 ```
 	$this->call(UserSeeder::class);
 	$this->call(PermissionSeeder::class);
 ```
- 
-Run: `composer dump-autoload`
+
+- `php artisan migrate --seed`
+  
+- `php artisan serve`
+
+Go to `127.0.0.1:8000/panel/login`
+
+Email: `admin@gmail.com`
+Password: `12345678`
+
+Enjoy it.
+
