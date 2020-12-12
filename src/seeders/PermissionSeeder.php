@@ -40,7 +40,7 @@ class PermissionSeeder extends Seeder
                 'display_name' => 'نقش کاربر',
             ],
             [
-                'name' => 'GET-/panel/roles/create',
+                'name' => 'GET-/panel/roles',
                 'display_name' => 'لیست نقش ها',
             ],
             [
@@ -67,6 +67,7 @@ class PermissionSeeder extends Seeder
                 'name' => 'POST-/panel/managers',
                 'display_name' => 'افزودن مدیر',
             ],
+        
         ]);
     }
 }
