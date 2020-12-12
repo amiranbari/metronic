@@ -14,7 +14,7 @@ class PermissionSeeder extends Seeder
      */
     public function run()
     {
-        DB:table('permissions')->insert([
+        DB::table('permissions')->insert([
             [
                 'name' => 'GET-/panel',
                 'display_name' => 'داشبورد',
