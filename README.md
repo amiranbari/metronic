@@ -31,22 +31,4 @@ Change `composer.json` autoload section like below"
        }   
  ```
  
- #### Laravel 7
- 
- Change `composer.json` autoload section like below
-```
-   "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        },
-        "classmap": [
-            "database/seeds",
-            "database/factories",
-            "app/Models/"
-        ],
-        "files": [
-            "app/Tools/helpers.php"
-        ]
-    }
-```
 Run: `composer dump-autoload`
