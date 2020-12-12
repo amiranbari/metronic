@@ -5,13 +5,20 @@
 2) Run:
 `composer require amiranbari/metronic:dev-master`
 
- Run: `php artisan vendor:publish` - Then select 1.
+Run: `php artisan vendor:publish` - Then select 1.
  
- 4) Change locale to `fa` in `config/app.php`
+4) Change locale to `fa` in `config/app.php`
  
- 5) Add this to your providers in `config/app.php`
+5) Add this to your providers in `config/app.php`
  
- `App\Providers\MetronicServiceProvider::class,`
+`App\Providers\MetronicServiceProvider::class,`
+ 
+6) Add this to your Aliases in `config/app.php`
+
+```
+'Metronic' => App\Classes\Theme\Metronic::class,
+'Menu' => App\Classes\Theme\Menu::class,
+```
  
  #### Laravel 8
  Put this in `User.php` in Models directory
@@ -52,11 +59,11 @@ Change `composer.json` autoload section like below"
             'provider' => 'users',
         ]
 ```
-5) Put these in `Kernel.php` in Http directory
+7) Put these in `Kernel.php` in Http directory
 
 `use App\Http\Middleware\Panel\CheckPermission;`
 
-6) Put these in `Kernel.php` in $routeMiddleware
+8) Put these in `Kernel.php` in $routeMiddleware
 
 `'permission' => CheckPermission::class`
 
