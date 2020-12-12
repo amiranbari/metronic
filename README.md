@@ -9,18 +9,11 @@ Run: `php artisan vendor:publish` - Then select 1.
  
 4) Change locale to `fa` in `config/app.php`
  
-5) Add this to your providers in `config/app.php`
+5) Add this to your `Providers` in `config/app.php`
  
 `App\Providers\MetronicServiceProvider::class,`
  
-6) Add this to your Aliases in `config/app.php`
-
-```
-'Metronic' => App\Classes\Theme\Metronic::class,
-'Menu' => App\Classes\Theme\Menu::class,
-```
-
-7) Add this to your Aliases in `config/app.php`
+6) Add this to your `Aliases` in `config/app.php`
 
 ```
 'Metronic' => App\Classes\Theme\Metronic::class,
@@ -57,7 +50,7 @@ Change `composer.json` autoload section like below"
 	$this->call(PermissionSeeder::class);
 ```
 
-- `php artisan migrate --seed`
+- `php artisan migrate:fresh --seed` or `php artisan migrate --seed`
 
  Add these into guards in `auth.php`:
 ```
@@ -66,11 +59,12 @@ Change `composer.json` autoload section like below"
             'provider' => 'users',
         ]
 ```
-8) Put these in `Kernel.php` in Http directory
+7) Put these in `Kernel.php` in Http directory
 
 `use App\Http\Middleware\Panel\CheckPermission;`
+`'permission' => CheckPermission::class,` in routeMiddleware 
 
-9) Change these in `Authenticate.php` in redirectTo functions
+8) Change these in `Authenticate.php` in redirectTo functions
 
 `return route('panel.login');`
 
