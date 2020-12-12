@@ -31,4 +31,10 @@ Change `composer.json` autoload section like below"
        }   
  ```
  
+ Add these seeders call in `DatabaseSeeder.php`:
+```
+	$this->call(UserSeeder::class);
+	$this->call(PermissionSeeder::class);
+```
+ 
 Run: `composer dump-autoload`
