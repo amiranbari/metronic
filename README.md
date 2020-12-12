@@ -57,7 +57,7 @@ Change `composer.json` autoload section like below"
 	'admin' => [
             'driver' => 'session',
             'provider' => 'users',
-        ]
+        ],
 ```
 7) Put these in `Kernel.php` in Http directory
 
