@@ -30,9 +30,13 @@ class PermissionSync extends Command
 
     private function getRoutes()
     {
+        $blocked = [
+            'panel/login',
+            'panel/logout'
+        ];
         $routes = [];
         foreach (Route::getRoutes() as $route)
-            if(startsWith($route->uri, "panel"))
+            if(startsWith($route->uri, "panel") && !(in_array($route->uri, $blocked)))
                 $routes[] = $route;
         return $routes;
     }

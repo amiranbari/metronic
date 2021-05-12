@@ -19,13 +19,19 @@ return [
             'title' => 'مدیران',
             'icon' => 'media/svg/icons/Communication/Group.svg',
             'bullet' => 'line',
-            'page' => 'panel/managers'
+            'page' => [
+                'panel/managers',
+                'panel/managers/create'
+            ]
         ],
         [
             'title' => 'نقش ها',
             'icon' => 'media/svg/icons/General/Visible.svg',
             'bullet' => 'dot',
-            'page' => 'panel/roles'
+            'page' => [
+                'panel/roles',
+                'panel/roles/create'
+            ]
         ],
 
 

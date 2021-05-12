@@ -76,7 +76,11 @@ class Menu
                 $url = '#';
 
                 if (isset($item['page'])) {
-                    $url = url($item['page']);
+                    if (is_array($item['page'])){
+                        $url = url($item['page'][0]);
+                    }else{
+                        $url = url($item['page']);
+                    }
                 }
 
                 $target = '';
@@ -439,8 +443,16 @@ class Menu
 
         self::checkRecursion($rec);
 
-        if (isset($item['page']) && $item['page'] == $page) {
-            return true;
+        if (isset($item['page'])) {
+
+            if (is_array($item['page']))
+            {
+                return in_array(self::cleanup_numbers($page), array_map(function ($item){
+                    return self::cleanup_numbers($item);
+                    }, $item['page']));
+            }
+            elseif ($item['page'] == $page)
+                return true;
         }
 
         if (is_array($item)) {
@@ -452,6 +464,13 @@ class Menu
         }
 
         return false;
+    }
+
+    //clean string from numbers for menu which has array of page for active
+    public static function cleanup_numbers(string $string)
+    {
+        $numbers = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "0", " ");
+        return str_replace($numbers, '', $string);
     }
 
     // Check for active Horizontal Menu item
