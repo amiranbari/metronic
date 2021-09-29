@@ -1,4 +1,4 @@
-# metronic
+# Metronic
 
 1) Config your database in .env.
 
